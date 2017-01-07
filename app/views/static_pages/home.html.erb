@@ -1,2 +1,4 @@
-<h1>StaticPages#home</h1>
-<p>Hello World!</p>
+<h1>Sakurabo Home Page</h1>
+<p>Signed in as <%= @user_email %></p>
+
+<%= link_to 'Logout', destroy_user_session_url %>
