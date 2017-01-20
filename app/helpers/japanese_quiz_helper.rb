@@ -1,0 +1,2 @@
+module JapaneseQuizHelper
+end
