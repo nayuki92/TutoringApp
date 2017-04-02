@@ -1,0 +1,25 @@
+<h1><%= @title %></h1>
+
+<table border="1">
+  <tr>
+    <th>date</th>
+    <th>title</th>
+    <th>content</th>
+  </tr>
+
+
+
+  <% @reports.each do |report| %>
+      <tr>
+        <td><%= report.created_at %></td>
+        <td>
+          <%= link_to report.title, "/report/#{report.id}", method: :get %>
+        </td>
+        <td><%= report.content %></td>
+      </tr>
+  <% end %>
+</table>
+
+<BR/>
+
+<%= link_to 'Home Page', static_pages_home_url %>
