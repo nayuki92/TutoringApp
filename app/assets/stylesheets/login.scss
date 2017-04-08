@@ -1,0 +1,24 @@
+// Place all the styles related to the report controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "materialize/components/color";
+$primary-color: color("pink", "lighten-6") !default;
+@import 'materialize';
+
+#login_container{
+  width: 400px;
+  border: 1px solid;
+  margin: 20px auto 0;
+  padding: 0px 15px 15px;
+}
+
+
+#login_container .actions{
+   float: right;
+ }
+
+#login_container .field{
+  margin-top:5px;
+  margin-bottom:10px;
+}

@@ -1,10 +1,10 @@
-<h1>Sakurabo Home Page</h1>
-<p>Signed in as <%= @user_email %></p>
 
-<ul>
-  <li><%= link_to 'Weekly Lesson Report', report_url %></li>
-  <li>Lesson curriculum</li>
-  <li>Contact</li>
-</ul>
+<div id="home_container">
+  <%= render :partial => "shared/sidemenu" %>
 
-<%= link_to 'Logout', destroy_user_session_url %>
+  <div id="main_container">
+    <p>You are logged in as <%= @user_id %>!</p>
+    <p>ここに何かメインのコンテンツを持ってくる。</p>
+  </div>
+
+</div>

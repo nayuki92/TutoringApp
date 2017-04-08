@@ -2,7 +2,7 @@ class ReportController < ApplicationController
   before_action :sign_in_required
 
   def index
-    @title = 'Lesson report page'
+    @title = '学習の記録'
     @user_id = current_user.id;
     @reports = Report.where(user_id: @user_id)
   end

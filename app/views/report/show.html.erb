@@ -1,12 +1,15 @@
 <% if user_signed_in? && current_user.id == @report.user_id %>
-    <h1>Report Page</h1>
-    Date: <%= @report.created_at %>
-    <BR/>
-    Title: <%= @report.title %>
-    <BR/>
+    <%= render :partial => "shared/sidemenu" %>
+    <div id="report_main" class="container">
+
+      <h5><%= @report.title %></h5>
+      <p>Date: <%= @report.created_at.to_s[0..9] %></p>
+      <div class="divider"></div>
+    <BR>
     Content: <%= @report.content %>
     <BR/>
 
     <BR/>
-    <%= link_to 'Home Page', static_pages_home_url %>
+    <%= link_to '戻る', report_url %>
+    </div>
 <% end %>

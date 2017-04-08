@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import "materialize/components/color";
-$primary-color: color("blue", "lighten-2") !default;
-@import 'materialize';
+#report_main{
+  margin-left:300px;
+  margin-top:40px;
+  padding:0px 0px 40px 40px;
+}

@@ -1,25 +1,31 @@
-<h1><%= @title %></h1>
+<%= render :partial => "shared/sidemenu" %>
 
-<table border="1">
-  <tr>
-    <th>date</th>
-    <th>title</th>
-    <th>content</th>
-  </tr>
+<div id="report_main" class="container">
+  <h4><%= @title %></h4>
+  <BR>
+  <table class="striped">
+    <thead>
+    <tr>
+      <th>date</th>
+      <th>title</th>
+      <th>content</th>
+    </tr>
+    </thead>
 
+    <tbody>
+    <% @reports.each do |report| %>
+        <tr>
+          <td width="15%"><%= report.created_at.to_s[0..10] %></td>
+          <td width="20%">
+            <%= link_to report.title, "/report/#{report.id}", method: :get %>
+          </td>
+          <td width="65%"><%= report.content.to_s[0..100]+"..." %></td>
+        </tr>
+    <% end %>
+    </tbody>
 
+  </table>
 
-  <% @reports.each do |report| %>
-      <tr>
-        <td><%= report.created_at %></td>
-        <td>
-          <%= link_to report.title, "/report/#{report.id}", method: :get %>
-        </td>
-        <td><%= report.content %></td>
-      </tr>
-  <% end %>
-</table>
+  <BR/>
 
-<BR/>
-
-<%= link_to 'Home Page', static_pages_home_url %>
+</div>
