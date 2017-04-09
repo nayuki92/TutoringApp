@@ -52,3 +52,6 @@ gem 'devise'
 
 # materialize
 gem 'materialize-sass'
+
+#rails admin
+gem 'rails_admin'

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admin_users
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root to: 'static_pages#home'
   devise_for :users
   get 'static_pages/home'
