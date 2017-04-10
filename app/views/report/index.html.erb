@@ -1,9 +1,18 @@
 <%= render :partial => "shared/sidemenu" %>
 
 <div id="report_main" class="container">
-  <h4><%= @title %></h4>
+
+  <h5><%= @latest_report.title %></h5>
+  <p><span class="new badge red" data-badge-caption="NEW" style="float:left; margin-left:0px; margin-right:5px;"></span> <%= @latest_report.created_at.to_s[0..10] %></p>
   <BR>
-  <table class="striped">
+  <div class="block">
+  <%= raw @latest_report.content %>
+  </div>
+
+  <div id="past_reports_container">
+    <h5>過去の記録</h5>
+
+    <table class="striped">
     <thead>
     <tr>
       <th>date</th>
@@ -11,7 +20,6 @@
       <th>content</th>
     </tr>
     </thead>
-
     <tbody>
     <% @reports.each do |report| %>
         <tr>
@@ -19,13 +27,12 @@
           <td width="20%">
             <%= link_to report.title, "/report/#{report.id}", method: :get %>
           </td>
-          <td width="65%"><%= raw report.content.to_s[0..100]+"..." %></td>
+          <td width="65%"><%= strip_tags report.content.to_s[0..100]+"..." %></td>
         </tr>
     <% end %>
     </tbody>
 
   </table>
-
-  <BR/>
+  </div>
 
 </div>

@@ -5,6 +5,7 @@ class ReportController < ApplicationController
     @title = '学習の記録'
     @user_id = current_user.id;
     @reports = Report.where(user_id: @user_id).order("created_at DESC")
+    @latest_report = @reports[0]
   end
 
   def show
