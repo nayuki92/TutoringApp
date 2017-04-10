@@ -4,7 +4,7 @@ class ReportController < ApplicationController
   def index
     @title = '学習の記録'
     @user_id = current_user.id;
-    @reports = Report.where(user_id: @user_id)
+    @reports = Report.where(user_id: @user_id).order("created_at DESC")
   end
 
   def show
@@ -14,3 +14,4 @@ class ReportController < ApplicationController
 
 
 end
+

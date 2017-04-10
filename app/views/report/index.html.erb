@@ -19,7 +19,7 @@
           <td width="20%">
             <%= link_to report.title, "/report/#{report.id}", method: :get %>
           </td>
-          <td width="65%"><%= report.content.to_s[0..100]+"..." %></td>
+          <td width="65%"><%= raw report.content.to_s[0..100]+"..." %></td>
         </tr>
     <% end %>
     </tbody>
