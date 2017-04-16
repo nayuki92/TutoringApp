@@ -5,7 +5,8 @@
 #main_container{
   margin-left:300px;
   padding:0px 0px 40px 40px;
-  margin-top: 60px;
+  margin-top: 70px;
+  width: 800px;
 }
 
 .brand_view{
@@ -15,4 +16,57 @@
 .home_img {
   border: 5px solid #e6e6e6 ;
   background: #fff ;
+}
+
+.main_sun_content{
+  margin-top:50px;
+}
+
+.main_sun_content h5{
+}
+
+.box_update,.box_notice {
+  border: 2px solid #da4033;
+  border-radius: 4px;
+  margin: 2em 0;
+  padding: 2em;
+  position: relative;
+}
+
+.box_update::before {
+  background-color: #fff;
+  color: #da4033;
+  content: "UPDATE";
+  font-weight: bold;
+  left: 1em;
+  padding: 0 .5em;
+  position: absolute;
+  top: -1em;
+}
+
+.box_notice::before {
+  background-color: #fff;
+  color: #da4033;
+  content: "NOTICE";
+  font-weight: bold;
+  left: 1em;
+  padding: 0 .5em;
+  position: absolute;
+  top: -1em;
+}
+
+#main_container h5 {
+  position: relative;
+  padding-bottom: .5em;
+  border-bottom: 4px solid #ccc;
+}
+#main_container h5::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  z-index: 2;
+  content: '';
+  width: 20%;
+  height: 4px;
+  background-color: #da4033;
 }
