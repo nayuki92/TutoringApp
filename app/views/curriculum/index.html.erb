@@ -1,0 +1,15 @@
+<%= render :partial => "shared/sidemenu" %>
+
+<div id="curriculum_container" class="container">
+
+  <div class="summary">
+    <h5>今後の方針</h5>
+    <%= @progress.summary  %>
+  </div>
+
+  <div class="table">
+    <h5>進度状況</h5>
+    <%= raw @progress.progress_url.html_safe  %>
+  </div>
+
+</div>

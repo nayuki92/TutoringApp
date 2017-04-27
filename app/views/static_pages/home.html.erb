@@ -4,21 +4,19 @@
   <div id="main_container">
 
     <h5>さくらぼ管理画面へようこそ</h5>
-    <p>これはテスト文章です。これはテスト文章です。これはテスト文章です。これはテスト文章です。これはテスト文章です。</p>
+    <p>現在以下の機能が利用可能です。</p>
+  <ul>
+    <li><b>Report</b>: 授業で何を勉強したのかの記録です。</li>
+    <li><b>Curriculum & Progress</b>: 進度状況の記録です。</li>
+    <li><b>Messages</b>: (準備中)</li>
+  </ul>
 
     <div class="row main_sun_content">
-      <div class="col s6">
-        <div class="box_notice notice">
-          <li>notice 1</li>
-          <li>notice 2</li>
-          <li>notice 3</li>
-        </div>
-      </div>
-      <div class="col s6">
+      <div class="col s12">
         <div class="box_update update">
-          <li>Update 1</li>
-          <li>Update 2</li>
-          <li>Update 3</li>
+          <% @updates.each do |update| %>
+          <li><%= update.created_at.to_s[0..10] %> <%= update.content  %></li>
+          <% end %>
         </div>
       </div>
     </div>
