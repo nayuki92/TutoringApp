@@ -1,17 +1,30 @@
-<ul id="slide-out" class="side-nav fixed">
-  <li>
-    <div class="brand_view">
-      <center><%= image_tag("sakurabo.png", :size=>"50x50", :class=>"brand_logo") %></center>
-      <center><h5>さくらぼ</h5></center>
-    </div>
-  </li>
-  <BR>
-  <li><a href="/"><i class="small material-icons">language</i>Home</a></li>
-  <li><a href="/report"><i class="small material-icons">mode_edit</i>Daily Report</a></li>
-  <li><a href="/curriculum"><i class="small material-icons">today</i>Curriculum & Progress</a></li>
-  <li><a href="#!"><i class="small material-icons">message</i>Messages</a></li>
-  <li><div class="divider"></div></li>
-  <BR>
-  <li><a href="/users/sign_out"><i class="small material-icons">settings_power</i>Logout</a></li>
-</ul>
+<div class="side_menu">
+  <div class="brand_view">
+    <center><%= image_tag("sakurabo.png", :size => "50x50", :class => "brand_logo") %></center>
+    <center><h5>さくらぼ</h5></center>
+  </div>
+  <BR/>
+  <ul>
+    <a href="/">
+      <li class="home">Home</li>
+    </a>
+    <a href="/report">
+      <li class="report">Daily Report</li>
+    </a>
+    <a href="/curriculum">
+      <li class="plan">Curriculum & Progress</li>
+    </a>
+    <a href="/">
+      <li class="message">Message</li>
+    </a>
+    <div class="divider"></div>
+    <BR>
+    <p><i>Logged in as <%= @user_name %></i></p>
+    <a href="users/sign_out">
+      <li class="logout">logout</li>
+    </a>
+  </ul>
+
+</div>
+
 

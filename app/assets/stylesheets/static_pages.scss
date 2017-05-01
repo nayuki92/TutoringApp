@@ -2,11 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 #main_container{
   background: #fff;
   margin-left:300px;
-  padding:0px 0px 40px 40px;
-  margin-top: 70px;
+  padding:5px 0px 40px 40px;
+  margin-top: 60px;
   width: 800px;
 }
 
@@ -20,7 +21,7 @@
 }
 
 .main_sun_content{
-  margin-top:50px;
+  margin-top:30px;
 }
 
 .main_sun_content h5{
@@ -72,3 +73,64 @@
   height: 4px;
   background-color: #da4033;
 }
+
+.side_menu {
+  height:100%;
+  width: 300px;
+  border-right: solid 1.5px #F7F7F7;
+  margin-top:-40px;
+  padding-left:20px;
+  padding-right:20px;
+  position: fixed;
+  z-index: 20;
+  a{
+    color: #666666;
+  }
+  ul{
+    list-style-type:none;
+  }
+  .menu_text{
+    font-size:1.10em;
+    padding-left:10px;
+  }
+  li{
+    padding-left: 50px;
+    margin-bottom:15px;
+    padding-top:10px;
+    padding-bottom:10px;
+    font-size:1.15em;
+    background-position:0px 4px;
+  }
+  li:hover{
+    background-color: #fff0f2;
+    border-radius: 5%;
+    text-decoration: none;
+  }
+  .home{
+    background-image:url("home.png");
+    background-size: 15%;
+    background-repeat:no-repeat;
+  }
+  .message{
+    background-image:url("mail.png");
+    background-size: 15%;
+    background-repeat:no-repeat;
+  }
+  .logout{
+    background-image:url("logout.png");
+    background-size: 15%;
+    background-repeat:no-repeat;
+  }
+  .plan{
+    background-image:url("progress.png");
+    background-size: 15%;
+    background-repeat:no-repeat;
+  }
+  .report{
+    background-image:url("report.png");
+    background-size: 15%;
+    background-repeat:no-repeat;
+  }
+
+}
+
