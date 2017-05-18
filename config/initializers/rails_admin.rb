@@ -38,4 +38,10 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model Report do
+    edit do
+      configure :content, :ck_editor
+    end
+  end
 end
