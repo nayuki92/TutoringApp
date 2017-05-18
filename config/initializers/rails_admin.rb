@@ -44,4 +44,11 @@ RailsAdmin.config do |config|
       configure :content, :ck_editor
     end
   end
+
+  config.model Curriculum do
+    edit do
+      configure :summary, :ck_editor
+    end
+  end
+
 end
