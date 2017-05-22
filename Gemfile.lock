@@ -206,6 +206,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport (~> 5.0.2)
   byebug
   ckeditor
   coffee-rails (~> 4.2)
