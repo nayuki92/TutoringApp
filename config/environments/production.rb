@@ -86,4 +86,10 @@ Rails.application.configure do
 
   #devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  #CKEDITOR
+  config.assets.precompile += Ckeditor.assets
+  config.assets.precompile += %w( ckeditor/* )
+  config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
+
 end
