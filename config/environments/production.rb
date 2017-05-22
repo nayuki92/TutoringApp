@@ -92,4 +92,7 @@ Rails.application.configure do
   config.assets.precompile += %w( ckeditor/* )
   config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
 
+  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
+
+
 end
