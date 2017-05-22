@@ -55,8 +55,5 @@ gem 'devise'
 # materialize
 gem 'materialize-sass'
 
-#rails admin
-gem 'rails_admin'
-
 #ck Editor
 gem 'ckeditor'
