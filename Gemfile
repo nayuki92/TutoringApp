@@ -58,3 +58,5 @@ gem 'rails_admin'
 
 #ck Editor
 gem 'ckeditor'
+
+gem 'carrierwave'
