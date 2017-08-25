@@ -60,3 +60,4 @@ gem 'rails_admin'
 gem 'ckeditor'
 
 gem 'carrierwave'
+gem 'mini_magick'
